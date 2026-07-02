@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sona Juice & Sweet Center | Siddhpur's Legend Since 1989</title>
+    <!-- Google Fonts for High-End Luxury Vibe -->
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        /* Modern Design Tokens */
+        :root {
+            --bg-dark: #0A0A0B;
+            --card-bg: #131316;
+            --accent-gold: #E5A93B;
+            --accent-red: #E23744; 
+            --text-main: #F4F4F6;
+            --text-muted: #A0A0AA;
+            --border-glow: rgba(229, 169, 59, 0.15);
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background-color: var(--bg-dark);
+            color: var(--text-main);
+            overflow-x: hidden;
+            line-height: 1.6;
+        }
+
+        /* Premium Blurred Navbar */
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background: rgba(10, 10, 11, 0.85);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+            padding: 20px 6%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 1000;
+        }
+
+        .logo {
+            font-family: 'Cinzel', serif;
+            font-size: 1.6rem;
+            font-weight: 700;
+            letter-spacing: 2px;
+            color: #fff;
+        }
+
+        .logo span {
+            color: var(--accent-gold);
+        }
+
+        .nav-btn {
+            background: linear-gradient(135deg, var(--accent-red), #b91c1c);
+            color: white;
+            padding: 12px 28px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.9rem;
+            letter-spacing: 0.5px;
+            box-shadow: 0 4px 15px rgba(226, 55, 68, 0.3);
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .nav-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(226, 55, 68, 0.5);
+        }
+
+        /* Cinematic Hero Section */
+        .hero {
+            position: relative;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 120px 20px 60px;
+            /* Premium creamy beverage background */
+            background: radial-gradient(circle at center, rgba(10, 10, 11, 0.4) 0%, rgba(10, 10, 11, 0.9) 80%),
+                        url('https://images.unsplash.com/photo-1551024601-bec78aea704b?q=80&w=1600') center/cover no-repeat;
+            background-attachment: fixed;
+        }
+
+        .badge-1989 {
+            font-family: 'Cinzel', serif;
+            color: var(--accent-gold);
+            border: 1px solid var(--accent-gold);
+            padding: 6px 18px;
+            font-size: 0.85rem;
+            letter-spacing: 4px;
+            text-transform: uppercase;
+            border-radius: 3px;
+            margin-bottom: 25px;
+            background: rgba(0,0,0,0.4);
+            backdrop-filter: blur(5px);
+        }
+
+        .hero h1 {
+            font-family: 'Cinzel', serif;
+            font-size: 4.5rem;
+            font-weight: 700;
+            line-height: 1.1;
+            margin-bottom: 25px;
+            letter-spacing: -1px;
+            background: linear-gradient(to right, #fff 40%, #e2e2e7 70%, var(--accent-gold) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .hero p {
+            font-size: 1.3rem;
+            color: #E4E4E7;
+            max-width: 750px;
+            margin-bottom: 40px;
+            font-style: italic;
+            font-weight: 400;
+            text-shadow: 0 2px 10px rgba(0,0,0,0.8);
+        }
+
+        /* Legacy Statement Banner with Sweets Background */
+        .legacy-banner {
+            /* Premium Indian Sweets Background */
+            background: linear-gradient(rgba(10, 10, 11, 0.85), rgba(10, 10, 11, 0.85)), 
+                        url('https://images.unsplash.com/photo-1631515243349-e0cb75fb8d3a?q=80&w=1600') center/cover;
+            padding: 90px 20px;
+            text-align: center;
+            border-top: 1px solid rgba(255,255,255,0.05);
+            border-bottom: 1px solid rgba(255,255,255,0.05);
+            background-attachment: fixed;
+        }
+
+        .legacy-banner h3 {
+            font-family: 'Cinzel', serif;
+            font-size: 2.2rem;
+            color: var(--accent-gold);
+            margin-bottom: 15px;
+        }
+
+        .legacy-banner p {
+            max-width: 800px;
+            margin: 0 auto;
+            color: #d4d4d8;
+            font-size: 1.1rem;
+            font-weight: 300;
+        }
+
+        /* Custom Showstopper Menu Grid */
+        .menu-section {
+            padding: 80px 6% 100px;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .section-header h2 {
+            font-family: 'Cinzel', serif;
+            font-size: 2.8rem;
+            letter-spacing: 2px;
+            color: #fff;
+        }
+
+        .section-header div {
+            width: 60px;
+            height: 2px;
+            background: var(--accent-gold);
+            margin: 15px auto 0;
+        }
+
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .menu-card {
+            background: var(--card-bg);
+            border: 1px solid rgba(255, 255, 255, 0.03);
+            border-radius: 12px;
+            padding: 40px 30px;
+            text-align: center;
+            transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .menu-card::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background: linear-gradient(180deg, transparent 60%, rgba(229, 169, 59, 0.03) 100%);
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+
+        .menu-card:hover {
+            transform: translateY(-8px);
+            border-color: rgba(229, 169, 59, 0.3);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.4), 0 0 15px var(--border-glow);
+        }
+
+        .menu-card:hover::before {
+            opacity: 1;
+        }
+
+        .card-emoji {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            display: inline-block;
+        }
+
+        .menu-card h3 {
+            font-family: 'Cinzel', serif;
+            font-size: 1.3rem;
+            color: #fff;
+            margin-bottom: 15px;
+            letter-spacing: 0.5px;
+        }
+
+        .menu-card p {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+        }
+
+        /* Hyper-Clean Single Branch Footer */
+        footer {
+            background-color: #050506;
+            padding: 60px 6% 30px;
+            border-top: 1px solid rgba(255, 255, 255, 0.02);
+            text-align: center;
+        }
+
+        .footer-content {
+            max-width: 600px;
+            margin: 0 auto 40px;
+        }
+
+        .footer-content h4 {
+            font-family: 'Cinzel', serif;
+            color: var(--accent-gold);
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+            letter-spacing: 1px;
+        }
+
+        .footer-content p {
+            font-size: 1rem;
+            color: var(--text-main);
+            margin-bottom: 8px;
+        }
+
+        .footer-content .highlight-text {
+            color: var(--accent-gold);
+            font-weight: 600;
+            margin-top: 15px;
+            font-size: 1.3rem;
+            letter-spacing: 1px;
+        }
+
+        .footer-bottom {
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
+            padding-top: 25px;
+            font-size: 0.85rem;
+            color: #52525b;
+            letter-spacing: 0.5px;
+        }
+
+        /* Responsive UI fixes */
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 2.8rem; }
+            .hero p { font-size: 1.1rem; }
+            header { padding: 15px 4%; }
+            .logo { font-size: 1.3rem; }
+            .section-header h2 { font-size: 2.2rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header / Navbar -->
+    <header>
+        <div class="logo">Sona <span>Juice & Sweets</span></div>
+        <a href="https://www.zomato.com/siddhpur/sona-juice-center-and-sweet-center-sidhpur-locality-sidhpur/order" target="_blank" class="nav-btn">Order Online</a>
+    </header>
+
+    <!-- Cinematic Hero Section -->
+    <section class="hero">
+        <div class="badge-1989">Established 1989</div>
+        <h1>Pure Taste. Rich Legacy.</h1>
+        <p>"To visit Siddhpur and miss the legendary Sona Thick Lassi is to miss out on perfection itself. Experience the taste that defines our city."</p>
+        <a href="#signatures" style="color: var(--accent-gold); text-decoration: none; font-size: 0.9rem; text-transform: uppercase; letter-spacing: 2px; font-weight: 600; margin-top: 10px;">Scroll To Explore ↓</a>
+    </section>
+
+    <!-- Legacy Statement with Sweets Background -->
+    <section class="legacy-banner">
+        <h3>Celebrating 35+ Years of Excellence</h3>
+        <p>Since 1989, we have never compromised on purity and quality. A taste deeply rooted in the heart of Siddhpur, cherished and celebrated by generations.</p>
+    </section>
+
+    <!-- Premium Signature Menu Grid -->
+    <section class="menu-section" id="signatures">
+        <div class="section-header">
+            <h2>Our Royal Signatures</h2>
+            <div></div>
+        </div>
+        
+        <div class="grid-container">
+            <!-- 1. Lassi -->
+            <div class="menu-card">
+                <span class="card-emoji">🥛</span>
+                <h3>Iconic Thick Lassi</h3>
+                <p>Our absolute pride. Incredibly rich, thick, and traditionally crafted creamy lassi topped with pure love.</p>
+            </div>
+            
+            <!-- 2. Juices -->
+            <div class="menu-card">
+                <span class="card-emoji">🍹</span>
+                <h3>Artisanal Juices</h3>
+                <p>100% natural, freshly cold-pressed fruit juices designed to instantly refresh and revitalize your day.</p>
+            </div>
+            
+            <!-- 3. Sweets (Emoji Changed to Premium Dessert/Mithai Vibe) -->
+            <div class="menu-card">
+                <span class="card-emoji">🍮</span>
+                <h3>Premium Sweets</h3>
+                <p>Authentic traditional sweets meticulously prepared with pure ghee and heritage recipes passed down through decades.</p>
+            </div>
+
+            <!-- 4. Ice Cream -->
+            <div class="menu-card">
+                <span class="card-emoji">🍨</span>
+                <h3>Gourmet Ice Cream</h3>
+                <p>Indulge in our handcrafted, velvety ice creams available in a symphony of classic and exotic flavors.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Single Location Master Footer -->
+    <footer>
+        <div class="footer-content">
+            <h4>📍 The Only Authentic Location</h4>
+            <p>Sona Juice And Sweets</p>
+            <p>Zampli Pole, Tower Road, Siddhpur</p>
+            <p class="highlight-text">📞 Mobile: 9825092365</p>
+        </div>
+        
+        <div class="footer-bottom">
+            &copy; 2026 Sona Juice & Sweet Center. Crafted for the Legacy. <br>
+            <span style="color: #71717a;">Connect on Instagram: @mr_kohani_716</span>
+        </div>
+    </footer>
+
+</body>
+</html>
